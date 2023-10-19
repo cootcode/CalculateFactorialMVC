@@ -1,0 +1,30 @@
+﻿@model CalculateFactorialMVC_DawidGrabowski.Models.FactorialCalc
+@{
+    ViewBag.Title = "CalculateFactorial";
+}
+
+<h2>Calculate Factorial</h2>
+<br />
+<hr />
+
+@using (Html.BeginForm())
+{
+    <div class="table-responsive">
+        <table class="table table-lg">
+            <tr>
+                <td>@Html.LabelFor(m => m.NumberInput)</td>
+                <td>@Html.EditorFor(m => m.NumberInput)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>@Html.DisplayFor(m => m.Result)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Calculate Factorial" class="btn btn-lg btn-success" /></td>
+            </tr>
+        </table>
+    </div>
+}
+
+@Html.ActionLink("Back to main menu", "Index", "Home")

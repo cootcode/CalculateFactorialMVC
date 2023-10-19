@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Factorial Calculator</h1>
+
+    <p class="lead">This application is created to allow user to calculate factorial numbers.</p>
+    <hr />
+    <p class="lead">Rules:</p>
+    <ul>
+        <li>Calculator is created only to accept full numbers.</li>
+        <li>That means you can only input numbers like: 1,2,3,4,5 etc...</li>
+        <li>Please refrain from using decimal numbers, symbols or characters!</li>
+    </ul>
+
+        @using (Html.BeginForm("CalculateFactorial", "Factorials", FormMethod.Get))
+        {
+        <p>
+            <input type="submit" value="Go to calculator &raquo;" class="btn btn-primary" />
+        </p>
+    }
+</div>
